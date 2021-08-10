@@ -5,16 +5,29 @@ pipeline {
 		stage("compile") {
 			steps {
 				echo "Compiling"
-				bat """ javac Main.java """
+				bat """ javac AnimalAttr.java """
 				}
 			}
 			
 		stage ("run") {
 			steps {
 				echo "Running"
-				bat """ java Main"""
+				bat """ java AnimalAttr"""
 				}
 			}
 			
+		stage("compile1") {
+			steps {
+				echo "Compiling"
+				bat """ javac EmployeeInfo.java """
+				}
+			}
+			
+		stage ("run1") {
+			steps {
+				echo "Running"
+				bat """ java EmployeeInfo"""
+				}
+			}
 		}
 	}
